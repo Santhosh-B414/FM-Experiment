@@ -65,25 +65,59 @@ MODEL GRAPH:
 
 
 Program
+```
+Am = 17.6;
+Fm = 760;
+B = 6.1;
+Ac = 35.6;
+Fc = 7600;
+Fs = 76000;
+T = 0:1/Fs:3/Fm;
+em = Amcos(2%piFmT);
+subplot(3,1,1);
+plot(T, em);
+xtitle("Message Signal");
+xgrid();
+ec = Accos(2%piFcT);
+subplot(3,1,2);
+plot(T, ec);
+xtitle("Carrier Signal");
+xgrid();
+efm = Accos( (2%piFcT) + (B * sin(2*%piFmT)) );
+subplot(3,1,3);
+plot(T, efm);
+xtitle("FM Signal");
+xgrid();
+
+```
+
+
 
 
 Output Waveform
+<img width="1883" height="1060" alt="image" src="https://github.com/user-attachments/assets/97ba5e99-6622-4d94-a6e3-31928852818b" />
+
 
 
 
 Tabulation
+![WhatsApp Image 2025-11-23 at 1 19 21 PM](https://github.com/user-attachments/assets/04a66cea-baba-46e5-b806-1e81970f9b89)
+
+
 
 
 
 Calculation
+![WhatsApp Image 2025-11-23 at 1 19 43 PM](https://github.com/user-attachments/assets/1563ebed-af9c-4f9c-b85b-9b506cfd7bd8)
 
 
 
-Frequency Deviation Practical = 
 
-Modulation Index Practical	= 
+Frequency Deviation Practical = 2559.1
 
-Modulation Index Theoretical	=
+Modulation Index Practical	= 0.028
+
+Modulation Index Theoretical	= 0.311
 
 
 
